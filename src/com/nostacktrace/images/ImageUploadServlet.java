@@ -1,4 +1,4 @@
-package com.nostacktrace;
+package com.nostacktrace.images;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,8 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
-
-import com.nostacktrace.images.ImageManager;
 
 @WebServlet("/upload")
 @MultipartConfig
@@ -63,7 +61,6 @@ public class ImageUploadServlet extends HttpServlet {
 			e.printStackTrace();
 			flashMessage(request, "Hmm... I seem to have lost that upload.");
 			return;
-
 		} finally {
 			close(contentStream);
 		}

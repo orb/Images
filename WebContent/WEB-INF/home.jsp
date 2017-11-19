@@ -58,7 +58,7 @@
 
 	<footer class="container">
 		<hr />
-		Please feel free to copy the ideas in your class, but not the code.
+		Please feel free to copy the ideas in your project, but not the code.
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

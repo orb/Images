@@ -1,4 +1,4 @@
-package com.nostacktrace;
+package com.nostacktrace.images;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

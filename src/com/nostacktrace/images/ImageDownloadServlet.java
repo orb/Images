@@ -1,4 +1,4 @@
-package com.nostacktrace;
+package com.nostacktrace.images;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,9 +9,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.nostacktrace.images.Image;
-import com.nostacktrace.images.ImageManager;
 
 @WebServlet("/download")
 public class ImageDownloadServlet extends HttpServlet {
@@ -29,7 +26,7 @@ public class ImageDownloadServlet extends HttpServlet {
 			return null;
 		}
 	}
-
+	
 	private Integer parseInt(String value) {
 		Integer id = null;
 		try {
@@ -57,7 +54,6 @@ public class ImageDownloadServlet extends HttpServlet {
 	private boolean respondWithImage(HttpServletResponse response, Image image) {
 		if (image != null) {
 			try {
-
 				response.setStatus(200);
 				response.setContentType(image.getContentType());
 				copyIO(image.getContentStream(), response.getOutputStream());
@@ -79,5 +75,4 @@ public class ImageDownloadServlet extends HttpServlet {
 			sendNotFound(response);
 		}
 	}
-
 }

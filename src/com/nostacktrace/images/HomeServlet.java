@@ -26,12 +26,12 @@ public class HomeServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {	
-		ImageManager manager = new ImageManager();
 
 		if (!flashNotice(request)) {
 			request.setAttribute("notice", "Please feel free to upload an image!");
 		}
 		
+		ImageManager manager = new ImageManager();
 		request.setAttribute("images", manager.allImages());
 		request.getRequestDispatcher("/WEB-INF/home.jsp").forward(request, response);
 	}

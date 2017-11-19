@@ -36,6 +36,4 @@ public class Image {
 	public InputStream getContentStream() {
 		return contentStream;
 	}
-	
-
 }

@@ -9,8 +9,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.nostacktrace.DataManager;
-
 public class ImageManager extends DataManager {
 
 	public List<Image> allImages() {
@@ -19,6 +17,7 @@ public class ImageManager extends DataManager {
 		Connection conn = null;
 		Statement st = null;
 		ResultSet rs = null;
+		
 		try {
 			conn = Database.connection();
 			st = conn.createStatement();
@@ -43,6 +42,7 @@ public class ImageManager extends DataManager {
 		Connection conn = null;
 		PreparedStatement st = null;
 		ResultSet rs = null;
+		
 		try {
 			conn = Database.connection();
 			st = conn.prepareStatement("INSERT INTO images (name,content_type,content) values (?, ?, ?)");
